@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="top">قم بمعرفة المواد المسموح لك دراستها طبقا لشجرة المواد، بطريقة بسيطة وسريعة</div>
+
+
+    <div class="table1">
+
+        <div class="numberOfMaterialsDiv">
+            <div class="numerLabel">
+                <label>قم بالضغط على المواد التي اجتزتها بنجاح </label>
+
+            </div>
+            <div class="allSubjectContainer">
+
+            </div>
+        </div>
+
+        <div class="statusDiv">
+            <div class="statusLabel">
+                <label>معلومات</label>
+            </div>
+            <div class="status">
+                <label>عدد المواد الكلي:</label>
+                <label class="scoreLabel lblAllSbj">0</label>
+                <hr>
+                <label>عدد المواد تم اجتيازها بنجاح:</label>
+                <label class="scoreLabel lblTakenSbj">0</label>
+                <hr>
+                <label>عدد المواد الباقي:</label>
+                <label class="scoreLabel lblreamingSbj">0</label>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tableDiv">
+        <table>
+            <tr>
+                <th>عدد الوحدات الكلي </th>
+                <th>عدد الوحدات المنجزة </th>
+                <th>عدد الوحدات الباقية</th>
+            </tr>
+
+            <tr>
+                <td class="tText numCrditAll">0</td>
+                <td class="tText numCriditTaken">0</td>
+                <td class="tText numCriditRemaing">0</td>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+    <div class="allowedSubject">
+
+        <div class="allowedDiv">
+            <div class="numerLabel">
+                <label>المواد المسموح بتنزيلها طبقا لشجرة المواد</label>
+
+            </div>
+            <div class="allAllowedSubject">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <style>
+        .allAllowedSubject {
+
+            background-color: rgb(255, 255, 255);
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 150px);
+            font-size: 20px;
+            color: white;
+            grid-gap: 50px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .allowedSubject {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .allowedDiv {
+            box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            display: grid;
+            grid-template-rows: 50px, 1fr;
+        }
+
+        .tText {
+            font-size: 40px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            font-size: 30px;
+        }
+
+        table {
+            width: 80%;
+            border: 1px solid;
+        }
+
+        .tableDiv {
+
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .top {
+            margin-right: 5%;
+            margin-left: 5%;
+            background-color: rgb(179, 228, 199);
+            height: 50px;
+            border-radius: 5px;
+            padding-right: 30px;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+        }
+
+        .numberOfMaterialsDiv,
+        .statusDiv {
+            border-radius: 5px;
+
+            box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.1);
+            width: 1fr;
+            display: grid;
+            grid-template-rows: 50px 1fr;
+        }
+
+        .statusDiv {
+            height: 600px !important;
+        }
+
+        label {
+            text-align: right;
+
+        }
+
+        .statusLabel,
+        .numerLabel {
+            background-color: rgb(119, 238, 145);
+            margin: auto;
+            text-align: right;
+            width: 100%;
+            color: white;
+            height: 50px;
+            border-radius: 5px 5px 0px 0px;
+            display: flex;
+
+            justify-content: right;
+            align-items: center;
+            display: flex;
+        }
+
+
+        .numerLabel {
+            background-color: rgb(64, 119, 219);
+
+        }
+
+        .statusLabel label,
+        .numerLabel label {
+            padding-right: 20px;
+        }
+
+        .status {
+            margin-top: 10px;
+            display: grid;
+            grid-template-rows: repeat(8, 1fr);
+            font-size: 25px;
+            color: rgb(83, 83, 83);
+        }
+
+        .status hr {
+            width: 100%;
+            height: 1px;
+        }
+
+        .status label {
+            padding-right: 10px;
+        }
+
+        .scoreLabel {
+            font-size: 40px;
+        }
+
+        .table1 {
+            margin-top: 30px;
+            margin-right: 8%;
+            margin-left: 5%;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: minmax(500px, 1fr) 400px;
+            grid-template-rows: auto;
+        }
+
+        .btn {
+            border: 2px solid black;
+            height: 50px;
+            border-radius: 5px;
+            color: rgb(32, 32, 32);
+            margin: 30px 10px 10px 10px;
+            font-size: 23px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .btn.pressed {
+            background-color: rgb(117, 117, 117);
+            color: rgb(219, 82, 64);
+        }
+
+        .btn:hover {
+            color: rgb(64, 119, 219);
+            background-color: rgb(212, 212, 212);
+        }
+
+        .lblSubject {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 0, 0);
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+
+
+        }
+    </style>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
